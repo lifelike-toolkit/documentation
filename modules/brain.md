@@ -36,13 +36,13 @@ class Characters:
 * Adds a character to the characters list.
 * Parameters:
   * name: Unique name of the character.
-  * background: Background of the character.
+  * background: Background of the character. More detailed is better.
   
 `update(self, name: str, background: str) -> None`
 * Updates a character's background.
 * Parameters:
   * name: Unique name of the character.
-  * background: New background of the character.
+  * background: New background of the character. More detailed is better.
 
 
 `delete(self, name: str) -> None`
@@ -71,7 +71,7 @@ class Conversations:
 * Parameters:
   * path: Path to the JSON file containing the conversations data.
   * characters: A Characters object.
-  * llm: A language model object (LLM).
+  * llm: A language model object (LLM). Look here for more info: https://python.langchain.com/en/latest/modules/models/llms/integrations.html
 
 `context_out(self, context: str) -> ValueError`
 * Checks if a conversation context does not exist.
@@ -100,7 +100,8 @@ class Conversations:
 `new(self, context: str, participants: Set[str]) -> None `
 * Creates a new conversation.
 * Parameters: 
-  * context: Unique context of the conversation. - participants`: A set of character names.
+  * context: Unique context of the conversation.
+  * participants: A set of character names. (Must be in Characters class)
 
 
 `update(self, context: str, participants: Set[str], log: List[List[str]]) -> None`
@@ -126,7 +127,7 @@ class Conversations:
 * Generates a response in the conversation based on the context and the history.
 * Parameters:
   * context: Unique context of the conversation.
-  * history: Conversation history.
+  * history: Conversation history. 
   * muted: A set of muted character names.
 * Returns: A list containing speaker and the generated utterance.
 
