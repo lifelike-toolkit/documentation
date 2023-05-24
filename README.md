@@ -1,4 +1,4 @@
-# Documentation for Lifelike Toolkit
+# Lifelike Toolkit
 ## Requirements
 - python 3.10 and pip
 - OS: MacOS, Windows, Linux
@@ -6,3 +6,7 @@
 Install the package using: `pip install git+https://github.com/lifelike-toolkit/lifelike.git`
 
 From here, you can import different tools into your code using `from lifelike import <module-name>`
+
+## Documentation
+### [Usage Guide](https://lifelike-toolkit.github.io/documentation/usage/)
+### [API Reference](https://lifelike-toolkit.github.io/documentation/modules/)

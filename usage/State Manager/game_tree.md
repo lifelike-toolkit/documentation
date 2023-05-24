@@ -6,7 +6,6 @@ The game tree exposes a get_retriever() method which takes a string as input. By
 The game tree can be saved to a json, which allows bypassing the original embedding step, which can be costly if using openai.
 
 # Import 
-In the code for
 
 # Development
 ## Configuring a tree instance
