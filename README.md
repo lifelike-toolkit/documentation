@@ -8,5 +8,5 @@ Install the package using: `pip install git+https://github.com/lifelike-toolkit/
 From here, you can import different tools into your code using `from lifelike import <module-name>`
 
 ## Documentation
-### [Usage Guide](https://lifelike-toolkit.github.io/documentation/usage/)
-### [API Reference](https://lifelike-toolkit.github.io/documentation/modules/)
+### [Usage Guide](usage/README.md)
+### [API Reference](modules/README.md)

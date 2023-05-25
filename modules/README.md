@@ -1,3 +1,3 @@
 # API Reference
-[Brain]()\
-[State Manager]()
+## [Brain](brain.md)
+## [State Manager]()
