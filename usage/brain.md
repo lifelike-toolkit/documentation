@@ -1,4 +1,4 @@
-## Brain Useage
+## Brain Usage
 Install the package: `pip install git+https://github.com/lifelike-toolkit/lifelike.git`
 
 Then import it with `from lifelike import brain`

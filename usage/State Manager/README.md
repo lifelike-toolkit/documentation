@@ -1,2 +1,2 @@
-# State Manager Usage Guide
+# State Manager Usage
 ## [Game Tree](game_tree.md)
