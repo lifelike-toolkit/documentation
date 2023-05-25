@@ -1,5 +1,5 @@
 ## Brain Usage
-Install the package: `pip install git+https://github.com/lifelike-toolkit/lifelike.git`
+Install the package: `pip install lifelike`
 
 Then import it with `from lifelike import brain`
 
@@ -31,7 +31,7 @@ Once the object is initialized, the following methods can be used:
 - `update(self, context: str, participants: Set[str], log: List[List[str]]) -> None: ` with a unique context update the participants (set) and log (list of [character, utterance] in sequential order)
 - `delete(self, context: str) -> None: ` deletes a conversation from Conversations
 - `append(self, context: str, speaker: str, utterance: str) -> None:` add utterance from speaker in conversation with unique context
-- `generate(self, context: str, muted: Set[str]) -> List[str]:` given a conversations context and muted characters have an unmuted character say something and add it to the conversation. returns `[speaker, utterance]`
+- `generate(self, context: str, history: str, muted: Set[str]) -> List[str]:` given a conversations context and muted characters have an unmuted character say something and add it to the conversation. returns `[speaker, utterance]`
 - `save(self) -> None: ` saves all conversations to a path specialized in initialization
 
 
@@ -96,8 +96,8 @@ conversations.append(context, "NPC1", first_utterance) # It's good to start off 
 
 output("NPC1", first_utterance) # This isn't a part of the toolkit, just output to wherever the user will see it.
 
-
-response = conversations.generate(context, {"Player1"}) # It is good practice to mute the player characters so that the toolkit doesn't generate a response from them and they remain player controlled.
+response = conversations.generate(context, "", {"Player1"}) # It is good practice to mute the player characters so that the toolkit doesn't generate a response from them and they remain player controlled.
+# Feel free to leave history as an empty string for now. We're still figuring out how best to utilize it.
 
 output(response) # response is just a list of [speaker, utterance], throw it into output that user can see.
 ```
