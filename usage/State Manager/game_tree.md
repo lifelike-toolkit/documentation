@@ -68,8 +68,11 @@ After initializing the tree, you can now add nodes to it. For this example, we w
     tree.add_edges(start_id='0', end_id='2', embedding_name='dislike', embedding_template=dislike_embedding)
     ```
 
-Now that we have a fully built sequence tree, we can get the retriever.
+The tree in this state is only temporary and stored in memory. From here, you can save your progress with `tree.to_json(path_to_file.json)`. This tree can then be loaded in the future as described in the previous section. If you want to run the game however, you need to write it to the vectordatabase, which will then allow the retriever to function properly. 
 ```python
+# Writes to database. If this step is skipped, the retriever will return an empty string no matter the query
+tree.write_db()
+# Get retriever
 retriever = tree.get_retriever()
 ```
 Now that this is done, let's say the game asks the question:
